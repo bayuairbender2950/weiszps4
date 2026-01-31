@@ -76,12 +76,21 @@
         #console {
             display: none;
         }
+
+        #retry-info {
+            color: #F2CC60;
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            font-weight: 600;
+        }
     </style>
 </head>
 
 <body>
     <script>
-        if (window.applicationCache.status == '0') { window.location.replace("cache.html"); }
+        if (window.applicationCache.status == '0') {
+            window.location.replace("cache.html");
+        }
     </script>
     <pre id='console'></pre>
 
@@ -92,13 +101,15 @@
         <div class="loading-bar">
             <div class="loading-progress"></div>
         </div>
-        <p style="color: #8B949E; font-size: 0.95rem;">Mohon tunggu, game sedang diunlock...</p>
+        <p style="color: #8B949E; font-size: 0.95rem;" id="loading-info">Mohon tunggu, game sedang diunlock...</p>
+        <p id="retry-info"></p>
 
         <div class="credits">
             <p>Terima kasih: <a href="https://twitter.com/sleirsgoevy">@sleirsgoevy</a> • ChendoChap • <a
                     href="https://twitter.com/Znullptr">@Znullptr</a> • SiSTR0 • <a
                     href="https://x.com/Kameleonre_">@Kameleonre_</a> • Abc • <a href="https://twitter.com/GamerHack93"
                     target="_blank">@GamerHack93</a> • GamerHack •
+            </p>
         </div>
     </div>
 

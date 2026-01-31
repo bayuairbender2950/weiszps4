@@ -15,8 +15,6 @@ GNU Affero General Public License for more details.
 You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.  */
 
-// Enhanced error handling with auto-retry for PS4 webkit stability
-
 let retryCount = 0;
 const MAX_RETRIES = 3;
 let isRetrying = false;
