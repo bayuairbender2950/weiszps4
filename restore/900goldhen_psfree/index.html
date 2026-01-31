@@ -1,16 +1,108 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>PS4 Restore Host for 9.00 FW</title>
-<link rel="stylesheet" href="../../style.css">
+    <title>WEISZ GAMING SPACE - Restore GoldHEN</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .exploit-container {
+            max-width: 700px;
+            width: 100%;
+            background: #161B22;
+            border-radius: 12px;
+            border: 1px solid #30363D;
+            padding: 3rem 2.5rem;
+            text-align: center;
+        }
+
+        #msgs {
+            font-size: 1.5rem;
+            color: #58A6FF;
+            margin: 2rem 0;
+            font-weight: 600;
+        }
+
+        .loading-bar {
+            width: 100%;
+            height: 4px;
+            background: #21262D;
+            border-radius: 2px;
+            margin: 2rem 0;
+            overflow: hidden;
+        }
+
+        .loading-progress {
+            height: 100%;
+            background: #58A6FF;
+            width: 0%;
+            animation: loading 2s ease-in-out infinite;
+        }
+
+        @keyframes loading {
+            0% {
+                width: 0%;
+            }
+
+            50% {
+                width: 70%;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+
+        .credits {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #30363D;
+            font-size: 0.85rem;
+            color: #6E7681;
+        }
+
+        .credits a {
+            color: #58A6FF;
+            text-decoration: none;
+        }
+
+        #console {
+            display: none;
+        }
+    </style>
 </head>
+
 <body>
-<pre id='console'></pre>
-<h1>PS4 Restore Host for 9.00 FW</h1>
-<hr>
-<br>
-<h1 id="msgs" style="font-size: 30px;margin-top: 77px;margin-bottom: 455px;">Loading Payload... Please Wait</h1>
-<h1 style="margin-top: 43px;">Special Thanks to:<a href="https://twitter.com/sleirsgoevy" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@sleirsgoevy</a>ChendoChap<a href="https://twitter.com/Znullptr" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@Znullptr</a>SiSTR0<a href="https://x.com/Kameleonre_" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@Kameleonre_</a>Abc</h1>
-<script type='module' src='alert.mjs'></script>
+    <script>
+        if (window.applicationCache.status == '0') { window.location.replace("cache.html"); }
+    </script>
+    <pre id='console'></pre>
+
+    <div class="exploit-container">
+        <img src="../../weisz_logo.png" alt="WEISZ Gaming Space"
+            style="max-width: 300px; width: 100%; margin-bottom: 1.5rem;">
+        <h2 id="msgs">Mengembalikan GoldHEN v2.4b18.8...</h2>
+        <div class="loading-bar">
+            <div class="loading-progress"></div>
+        </div>
+        <p style="color: #8B949E; font-size: 0.95rem;">Mengembalikan pengaturan host default PS4</p>
+
+        <div class="credits">
+            <p>Terima kasih: <a href="https://twitter.com/sleirsgoevy">@sleirsgoevy</a> • ChendoChap • <a
+                    href="https://twitter.com/Znullptr">@Znullptr</a> • SiSTR0 • <a
+                    href="https://x.com/Kameleonre_">@Kameleonre_</a> • Abc • <a href="https://twitter.com/GamerHack93"
+                    target="_blank">@GamerHack93</a> • GamerHack •
+        </div>
+    </div>
+
+    <script type='module' src='alert.mjs'></script>
 </body>
+
 </html>

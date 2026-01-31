@@ -1,35 +1,123 @@
 <!DOCTYPE html>
-<html><head>
-<title>PS4 Restore Host to User's Guide</title>
-<link rel="stylesheet" href="../style.css">
+<html>
+
+<head>
+  <title>WEISZ GAMING SPACE - Restore Host</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .restore-container {
+      max-width: 700px;
+      width: 100%;
+      background: #161B22;
+      border-radius: 12px;
+      border: 1px solid #30363D;
+      padding: 3rem 2.5rem;
+      text-align: center;
+    }
+
+    .restore-title {
+      font-size: 2rem;
+      color: #C9D1D9;
+      margin-bottom: 1rem;
+    }
+
+    .restore-desc {
+      color: #8B949E;
+      font-size: 1.1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .btn-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .restore-btn {
+      padding: 1.2rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 8px;
+      border: 1px solid;
+      text-decoration: none;
+      display: block;
+      transition: all 0.2s ease;
+    }
+
+    .restore-btn.primary {
+      background: #1F6FEB;
+      border-color: #388BFD;
+      color: #FFFFFF;
+    }
+
+    .restore-btn.primary:focus {
+      background: #388BFD;
+      transform: translateY(-2px);
+    }
+
+    .restore-btn.secondary {
+      background: #21262D;
+      border-color: #30363D;
+      color: #C9D1D9;
+    }
+
+    .restore-btn.secondary:focus {
+      background: #30363D;
+      transform: translateY(-2px);
+    }
+
+    .credits {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #30363D;
+      font-size: 0.85rem;
+      color: #6E7681;
+    }
+
+    .credits a {
+      color: #58A6FF;
+      text-decoration: none;
+    }
+  </style>
 </head>
+
 <body>
-<h1 id="msgs">PS4 Restore Host to User's Guide</h1>
-<hr>
-<br>
-<h1 style="font-size: 18px;color: yellow;">Select Your Firmware</h1>
-<a href="505goldhen/index.html"><button class="btn" onmouseover="msgs.innerHTML='PS4 5.05 FW GoldHEN Host'" onmouseout="msgs.innerHTML='PS4 - PS5 Exploit Host by GamerHack'"> 5.05 FW GoldHEN </button></a>
-<a href="505/index.html"><button class="btn" onmouseover="msgs.innerHTML='PS4 5.05 FW Host v2.0'" onmouseout="msgs.innerHTML='PS4 - PS5 Exploit Host by GamerHack'"> 5.05 FW v2.0 </button></a>
-<br>
-<a href="672goldhen/index.html"><button class="btn" onmouseover="msgs.innerHTML='Restore PS4 6.72 FW GoldHEN Host with Automatic Exploitation'" onmouseout="msgs.innerHTML='PS4 Restore Host to User&#8217;s Guide'"> 6.72 FW GoldHEN </button></a>
-<a href="672/index.html"><button class="btn" onmouseover="msgs.innerHTML='Restore PS4 6.72 FW Host v3.0'" onmouseout="msgs.innerHTML='PS4 Restore Host to User&#8217;s Guide'"> 6.72 FW v3.0 </button></a>
-<a href="702/payload.html"><button class="btn" onmouseover="msgs.innerHTML='Restore PS4 7.02 FW Host v1.4'" onmouseout="msgs.innerHTML='PS4 Restore Host to User&#8217;s Guide'"> 7.02 FW v1.4 </button></a>
-<a href="75x/payload.html"><button class="btn" onmouseover="msgs.innerHTML='Restore PS4 7.50 - 7.55 FW Host v1.5'" onmouseout="msgs.innerHTML='PS4 Restore Host to User&#8217;s Guide'"> 7.50 - 7.55 FW v1.5 </button></a>
-<br>
-<a href="900goldhen/index.html"><button class="btn" onmouseover="msgs.innerHTML='Restore PS4 9.00 FW GoldHEN Host - FontFaceSet Webkit'" onmouseout="msgs.innerHTML='PS4 Restore Host to User&#8217;s Guide'"> 9.00 FW GoldHEN </button></a>
-<a href="900v2/index.html"><button class="btn" onmouseover="msgs.innerHTML='Restore PS4 9.00 FW Host v2.8 with Manual Exploitation - FontFaceSet Webkit'" onmouseout="msgs.innerHTML='PS4 Restore Host to User&#8217;s Guide'"> 9.00 FW v2.8 | Manual </button></a>
-<a href="900v3/index.html"><button class="btn" onmouseover="msgs.innerHTML='Restore PS4 9.00 FW Host v3.0 with Automatic Exploitation - FontFaceSet Webkit'" onmouseout="msgs.innerHTML='PS4 Restore Host to User&#8217;s Guide'"> 9.00 FW v3.0 | Auto </button></a>
-<br>
-<a href="900goldhen_psfree/index.html"><button class="btn" onmouseover="msgs.innerHTML='Restore PS4 9.00 FW GoldHEN Host - Psfree Webkit'" onmouseout="msgs.innerHTML='PS4 Restore Host to User&#8217;s Guide'"> 9.00 GoldHEN | Psfree </button></a>
-<br>
-<a href="../index.html"><button class="btn"> Return </button></a>
-<br>
-<h1 style="margin-top: 214px;">Designed by:<a href="https://twitter.com/GamerHack93" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@GamerHack93</a>A special thanks to all the devs on the scene.</h1>
-<script>
-var jailbreak_start_date = localStorage.getItem("jailbreak_start_date");
-if (jailbreak_start_date !== null) {
-  localStorage.removeItem("jailbreak_start_date");
-}
-</script>
+  <div class="restore-container">
+    <img src="../weisz_logo.png" alt="WEISZ Gaming Space" style="max-width: 300px; width: 100%; margin-bottom: 1.5rem;">
+    <h1 class="restore-title">Restore Host</h1>
+    <p class="restore-desc">Reset PS4 ke pengaturan host default</p>
+
+    <div class="btn-container">
+      <a href="900goldhen_psfree/index.html" class="restore-btn primary">
+        Restore 9.00 GoldHEN | Psfree
+      </a>
+
+      <a href="../index.html" class="restore-btn secondary">
+        Kembali ke Menu Utama
+      </a>
+    </div>
+
+    <div class="credits">
+      <p>Dibuat oleh <a href="https://twitter.com/GamerHack93">@GamerHack93</a></p>
+      <p style="margin-top: 0.3rem; font-size: 0.8rem;">WEISZ GAMING SPACE</p>
+    </div>
+  </div>
+
+  <script>
+    var jailbreak_start_date = localStorage.getItem("jailbreak_start_date");
+    if (jailbreak_start_date !== null) {
+      localStorage.removeItem("jailbreak_start_date");
+    }
+  </script>
 </body>
+
 </html>

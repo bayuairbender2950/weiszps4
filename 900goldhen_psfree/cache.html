@@ -1,19 +1,171 @@
 <!DOCTYPE html>
 <html manifest="cache.manifest">
+
 <head>
-<title>PS4 9.00 FW GoldHEN Host by GamerHack | Psfree + Lapse</title>
-<link rel="stylesheet" href="../style.css">
+    <title>WEISZ GAMING SPACE - Caching</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .cache-container {
+            max-width: 700px;
+            width: 100%;
+            background: #161B22;
+            border-radius: 12px;
+            border: 1px solid #30363D;
+            padding: 3rem 2.5rem;
+            text-align: center;
+        }
+
+        .cache-title {
+            font-size: 2rem;
+            color: #58A6FF;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .cache-status {
+            font-size: 1.2rem;
+            color: #C9D1D9;
+            margin: 1.5rem 0;
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 8px;
+            background: #21262D;
+            border-radius: 4px;
+            margin: 2rem 0;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: #58A6FF;
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 4px;
+        }
+
+        .cache-info {
+            font-size: 0.9rem;
+            color: #8B949E;
+            margin-top: 2rem;
+            line-height: 1.6;
+        }
+
+        .redirect-btn {
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            background: #1F6FEB;
+            border: 1px solid #388BFD;
+            color: white;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .redirect-btn:hover,
+        .redirect-btn:focus {
+            background: #388BFD;
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
+
 <body>
-<script>
-history.replaceState(null,null,'index.html');var histlength=history.length;history.go(-histlength);
-function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));setTimeout(function(){window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";},500)}
-function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Installed Successfully ✔";},1500);setTimeout(function(){window.msgs.innerHTML="Now Close And Re-Open Your Browser ...";},3500);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
-</script>
-<h1>PS4 9.00 FW GoldHEN Host by GamerHack</h1>
-<hr>
-<br>
-<h1 id="msgs" style="font-size: 30px;margin-top: 77px;margin-bottom: 455px;">Wait a Moment...</h1>
-<h1 style="margin-top: 43px;">Special Thanks to:<a href="https://twitter.com/sleirsgoevy" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@sleirsgoevy</a>ChendoChap<a href="https://twitter.com/Znullptr" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@Znullptr</a>SiSTR0<a href="https://x.com/Kameleonre_" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@Kameleonre_</a>Abc</h1>
+    <div class="cache-container">
+        <h1 class="cache-title">WEISZ GAMING SPACE</h1>
+        <p class="cache-status" id="status">Initializing cache...</p>
+        <div class="progress-container">
+            <div class="progress-bar" id="progress"></div>
+        </div>
+        <p class="cache-info">
+            Caching exploit files for offline use.<br>
+            This allows the exploit to work without internet connection.<br>
+            Please wait while files are being cached...
+        </p>
+        <button class="redirect-btn" id="continueBtn" style="display:none;" onclick="location.href='index.html'">
+            Continue to Exploit
+        </button>
+    </div>
+
+    <script>
+        var appCache = window.applicationCache;
+        var statusEl = document.getElementById('status');
+        var progressEl = document.getElementById('progress');
+        var continueBtn = document.getElementById('continueBtn');
+
+        appCache.addEventListener('checking', function () {
+            statusEl.textContent = 'Checking for manifest...';
+            progressEl.style.width = '10%';
+        }, false);
+
+        appCache.addEventListener('downloading', function () {
+            statusEl.textContent = 'Downloading cache files...';
+            progressEl.style.width = '30%';
+        }, false);
+
+        appCache.addEventListener('progress', function (e) {
+            if (e.lengthComputable) {
+                var percent = (e.loaded / e.total) * 100;
+                progressEl.style.width = (30 + (percent * 0.6)) + '%';
+                statusEl.textContent = 'Downloading: ' + Math.round(percent) + '%';
+            }
+        }, false);
+
+        appCache.addEventListener('cached', function () {
+            statusEl.textContent = 'Cache complete! Ready for offline use.';
+            progressEl.style.width = '100%';
+            continueBtn.style.display = 'inline-block';
+            setTimeout(function () {
+                location.href = 'index.html';
+            }, 2000);
+        }, false);
+
+        appCache.addEventListener('updateready', function () {
+            statusEl.textContent = 'Cache updated! Reloading...';
+            progressEl.style.width = '100%';
+            appCache.swapCache();
+            setTimeout(function () {
+                location.reload();
+            }, 1000);
+        }, false);
+
+        appCache.addEventListener('noupdate', function () {
+            statusEl.textContent = 'Cache already up to date!';
+            progressEl.style.width = '100%';
+            continueBtn.style.display = 'inline-block';
+            setTimeout(function () {
+                location.href = 'index.html';
+            }, 1500);
+        }, false);
+
+        appCache.addEventListener('error', function () {
+            statusEl.textContent = 'Cache error. Redirecting...';
+            progressEl.style.width = '100%';
+            continueBtn.style.display = 'inline-block';
+            setTimeout(function () {
+                location.href = 'index.html';
+            }, 2000);
+        }, false);
+
+        // Fallback timeout
+        setTimeout(function () {
+            if (progressEl.style.width !== '100%') {
+                statusEl.textContent = 'Taking longer than expected...';
+                continueBtn.style.display = 'inline-block';
+            }
+        }, 10000);
+    </script>
 </body>
+
 </html>

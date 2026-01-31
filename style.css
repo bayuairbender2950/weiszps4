@@ -1,108 +1,391 @@
-html {
-    background-image: url('img.jpg');
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-color: #24272b;
-    color: white;
+/* CLEAN PROFESSIONAL WEBKIT - OFFLINE READY */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    color: #FFFFFF;
+    line-height: 1.6;
+    background: #0D1117;
+}
+
+/* Main Layout */
+.site-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.site-main {
+    width: 100%;
+    max-width: 900px;
+    background: #161B22;
+    border-radius: 12px;
+    border: 1px solid #30363D;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.inner {
+    padding: 3rem 2.5rem;
+}
+
+/* Header */
+.header-section {
     text-align: center;
-    overflow: hidden;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #30363D;
 }
 
-h1 {
-    text-shadow: 0.1em 0.1em 0.2em black;
-    font-size: 25px;
-    color: white;
+.logo {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
 }
 
-a {
+.main-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #58A6FF;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #8B949E;
+    margin-bottom: 0.3rem;
+}
+
+.location {
+    font-size: 0.95rem;
+    color: #6E7681;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Menu */
+.menu-container {
+    display: block;
+}
+
+.crypto-container {
+    display: none;
+}
+
+.menu-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #C9D1D9;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Buttons - Clean Minimal */
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.exploit-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid;
+    transition: all 0.2s ease;
+    min-height: 140px;
+    outline: none;
+}
+
+.exploit-btn:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(88, 166, 255, 0.3);
+}
+
+.btn-icon {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.btn-label {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.btn-desc {
+    font-size: 0.9rem;
+    text-align: center;
+    opacity: 0.8;
+}
+
+/* Button Colors - Minimal */
+.exploit-btn.primary {
+    background: #1F6FEB;
+    border-color: #388BFD;
+    color: #FFFFFF;
+}
+
+.exploit-btn.primary:focus {
+    background: #388BFD;
+    border-color: #58A6FF;
+}
+
+.exploit-btn.secondary {
+    background: #21262D;
+    border-color: #30363D;
+    color: #C9D1D9;
+}
+
+.exploit-btn.secondary:focus {
+    background: #30363D;
+    border-color: #484F58;
+}
+
+.exploit-btn.danger {
+    background: #DA3633;
+    border-color: #F85149;
+    color: #FFFFFF;
+}
+
+.exploit-btn.danger:focus {
+    background: #F85149;
+    border-color: #FF7B72;
+}
+
+.exploit-btn.ps5 {
+    background: #0D1117;
+    border-color: #30363D;
+    color: #58A6FF;
+}
+
+.exploit-btn.ps5:focus {
+    background: #161B22;
+    border-color: #58A6FF;
+}
+
+/* Info Cards - Subtle */
+.info-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.info-card {
+    background: #0D1117;
+    border: 1px solid #30363D;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.info-card h3 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: #8B949E;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.info-card p {
+    font-size: 1rem;
+    color: #C9D1D9;
+    line-height: 1.5;
+}
+
+.link-primary {
+    color: #58A6FF;
     text-decoration: none;
 }
 
-#progress {
-    display: block;
+.link-primary:focus {
+    text-decoration: underline;
 }
 
-#menu {
-    display: block;
-}
-
-#crypto {
-    display: none;
-}
-
-#tools {
-    display: none;
-}
-
-#lnx {
-    display: none;
-}
-
-#mods {
-    display: none;
-}
-
-#console {
-    display: none;
-}
-
-.btn {
-    background-color: #003263;
-    color: white;
-    width: 227px;
-    height: 46px;
-    padding-bottom: 5px;
+/* Social - Text Only */
+.social-section {
     text-align: center;
-    font-size: 20px;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    margin-left: 5px;
-    margin-right: 5px;
-    border-style: none;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    border-radius: 4px;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #0D1117;
+    border: 1px solid #30363D;
+    border-radius: 8px;
 }
 
-.btn:hover {
-    background-color: #0069d9;
+.social-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #8B949E;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
 
-.btn-alt {
-    background-color: #b10000;
+.social-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
-.btn-alt:hover {
-    background-color: #f31414;
+.social-item {
+    font-size: 1rem;
+    color: #C9D1D9;
+    font-weight: 500;
 }
 
-.btn-onln {
-    background-color: #076300;
+/* Credits - Minimal */
+.credits {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #30363D;
+    font-size: 0.85rem;
+    color: #6E7681;
 }
 
-.btn-onln:hover {
-    background-color: #18891b;
+.credits a {
+    color: #58A6FF;
+    text-decoration: none;
 }
 
-.btn-toolbox {
-    background-color: #ae2301;
+.credits a:focus {
+    text-decoration: underline;
 }
 
-.btn-toolbox:hover {
-    background-color: #d42a01;
+.credits-small {
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+    opacity: 0.8;
 }
 
-.btn-ps5 {
-    background-color: #3d3f4e;
+/* Crypto */
+.crypto-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
 }
 
-.btn-ps5:hover {
-    background-color: #c2c2c2;
-    color: #303030;
+.crypto-card {
+    background: #0D1117;
+    border: 1px solid #30363D;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
 }
 
+.crypto-card h3 {
+    color: #F2CC60;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
 
+.qr-code {
+    width: 160px;
+    height: 160px;
+    margin: 1rem auto;
+    border-radius: 6px;
+    display: block;
+    border: 1px solid #30363D;
+}
 
+.crypto-address {
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    word-break: break-all;
+    background: #0D1117;
+    padding: 0.8rem;
+    border-radius: 6px;
+    color: #C9D1D9;
+    border: 1px solid #30363D;
+}
 
+.return-btn {
+    width: 100%;
+    max-width: 400px;
+    margin: 1.5rem auto 0;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+    .inner {
+        padding: 2rem 1.5rem;
+    }
+
+    .main-title {
+        font-size: 2.2rem;
+    }
+
+    .buttons-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-section {
+        grid-template-columns: 1fr;
+    }
+
+    .crypto-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .site-wrapper {
+        padding: 1rem;
+    }
+
+    .inner {
+        padding: 1.5rem;
+    }
+
+    .main-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0D1117;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #30363D;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #484F58;
+}
