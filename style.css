@@ -258,6 +258,88 @@ body {
     font-weight: 500;
 }
 
+/* Warning Section */
+.warning-section {
+    background: #3D1F00;
+    border: 2px solid #F2CC60;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.warning-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #FFD666;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.warning-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.warning-list li {
+    font-size: 0.95rem;
+    color: #F2CC60;
+    padding: 0.4rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.warning-list li:before {
+    content: "▶";
+    position: absolute;
+    left: 0;
+    color: #FFD666;
+}
+
+.warning-list strong {
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+/* Recovery Section */
+.recovery-section {
+    background: #1A2332;
+    border: 2px solid #58A6FF;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.recovery-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #58A6FF;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.recovery-list {
+    list-style: decimal;
+    padding-left: 1.5rem;
+    margin: 0 0 1rem 0;
+}
+
+.recovery-list li {
+    font-size: 0.9rem;
+    color: #C9D1D9;
+    padding: 0.3rem 0;
+}
+
+.recovery-note {
+    font-size: 0.85rem;
+    color: #8B949E;
+    font-style: italic;
+    text-align: center;
+    margin: 0;
+}
+
 /* Credits - Minimal */
 .credits {
     text-align: center;
