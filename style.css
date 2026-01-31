@@ -109,61 +109,26 @@ body {
     gap: 0.5rem;
     padding: 2rem 2rem;
     background: linear-gradient(135deg, #1F6FEB 0%, #1557B0 100%);
-    border: 2px solid transparent;
-    background-clip: padding-box;
-    position: relative;
+    border: 2px solid #388BFD;
     border-radius: 12px;
     color: #FFFFFF;
     text-decoration: none;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow:
-        0 4px 15px rgba(31, 111, 235, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(31, 111, 235, 0.3);
 }
 
-/* Gradient border effect */
-.exploit-btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 12px;
-    padding: 2px;
-    background: linear-gradient(135deg, #58A6FF, #1F6FEB, #388BFD);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: exclude;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.exploit-btn:hover::before,
-.exploit-btn:focus::before {
-    opacity: 1;
-}
-
+.exploit-btn:hover,
 .exploit-btn:focus {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(88, 166, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(56, 139, 253, 0.4);
+    border-color: #58A6FF;
 }
 
 .btn-icon {
     font-size: 2.5rem;
     font-weight: 700;
     color: #FFFFFF;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.exploit-btn:hover .btn-icon,
-.exploit-btn:focus .btn-icon {
-    transform: scale(1.1);
-    text-shadow:
-        0 2px 10px rgba(0, 0, 0, 0.5),
-        0 0 20px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .btn-label {
@@ -182,44 +147,30 @@ body {
 /* Button Colors - Minimal */
 .exploit-btn.primary {
     background: linear-gradient(135deg, #1F6FEB 0%, #1557B0 100%);
+    border-color: #388BFD;
 }
 
 .exploit-btn.primary:hover,
 .exploit-btn.primary:focus {
     background: linear-gradient(135deg, #388BFD 0%, #1F6FEB 100%);
-    box-shadow:
-        0 8px 25px rgba(56, 139, 253, 0.4),
-        0 0 20px rgba(88, 166, 255, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px) scale(1.02);
+    border-color: #58A6FF;
 }
 
 .exploit-btn.secondary {
     background: linear-gradient(135deg, #21262D 0%, #161B22 100%);
-    box-shadow:
-        0 4px 15px rgba(0, 0, 0, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.05);
-}
-
-.exploit-btn.secondary::before {
-    background: linear-gradient(135deg, #30363D, #484F58, #30363D);
+    border-color: #30363D;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .exploit-btn.secondary:hover,
 .exploit-btn.secondary:focus {
     background: linear-gradient(135deg, #30363D 0%, #21262D 100%);
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.5),
-        0 0 20px rgba(72, 79, 88, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    transform: translateY(-2px) scale(1.02);
+    border-color: #484F58;
 }
 
 .exploit-btn:active {
-    transform: translateY(0) scale(0.98);
-    box-shadow:
-        0 2px 8px rgba(31, 111, 235, 0.3),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(31, 111, 235, 0.3);
 }
 
 .exploit-btn.danger {
